@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="alert1" class="alert-box alert-warning"><strong>알림!</strong> 아래 내용을 확인해주세요.<button class="close-btn"onclick="alertDel('alert1');">✖️</button></div>
+    <div id="alert2" class ="alert-box alert-info "><strong>알림!</strong> 아래 내용을 확인해주세요.<button class="close-btn" onclick="alertDel('alert2');">✖️</button></div>
+    <div id="alert3" class="alert-box alert-secondary"><strong>알림!</strong> 아래 내용을 확인해주세요.<button class="close-btn" onclick="alertDel('alert3');">✖️</button></div>
+    <button class="show-btn" onclick="alertCreate('alert1'), alertCreate('alert2'), alertCreate('alert3');">다시 띄우기</button>
+    <script>
+        function alertDel(alertId){
+            document.getElementById(alertId).style.display='none';
+        }
+        function alertCreate(alertId){
+             document.getElementById(alertId).style.display='block';
+        }
+    </script>
+</html>
